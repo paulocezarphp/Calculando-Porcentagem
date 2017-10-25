@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Title of the document</title>
+		
+		<link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+		
+        <style>
+		
+		body{
+		   
+		   font-family: 'Archivo Black', sans-serif;
+		   letter-spacing: 2px;
+		   background:#f2f2f2;
+		   
+		}
+		
+		h3{
+		    font-size:40px;
+		}
+		
+		input{
+		   padding:10px 10px;
+		   width:70px;
+		   background:#dedede;
+		   color:#555555;
+		   border: none;
+		   margin:5px 5px;
+		   font-size:16px;
+		}
+		
+		hgroup{
+		
+		   background:#222222;
+		   color:#f2f2f2;
+		   padding:20px 30px;
+		   border-radius:5px;
+		   width:400px;		   
+           height:400px;
+           position:absolute;
+           top:50%;
+           left:50%;
+           margin-top:-220px;
+           margin-left:-230px;
+		   
+		}
+		
+		.botao{
+		   
+		   background:#33ccff;
+		   color:#007399;
+		   border-radius:3px;	  
+		   padding:10px 10px;
+		   cursor:pointer;
+           font-size:17px;
+		   
+		}
+		
+		.botao:hover{
+		   
+		   background:#66b3ff;
+		   
+		}
+		
+		#resultado{
+		   
+		   margin:30px 0px;
+		   border-radius:3px;
+		   background:#cccc00;
+		   color:#666600;
+		   padding:14px 0px;
+		   font-size:20px;
+		
+		}
+
+        </style>
+		
+		<script>
+		    
+
+            function fazerCalculo(){
+			
+	            var valor1 = document.getElementById("valor1").value;  
+		        var valor2 = document.getElementById("valor2").value;
+			    var soma = 0;		
+			    soma = (valor1 * valor2) / 100;
+			    document.getElementById("resultado").innerHTML = soma;
+                			
+			}
+
+            function fazerLimpezaA(){
+			    
+				document.getElementById("valor1").value = "";
+				
+				
+			}
+
+             function fazerLimpezaB(){
+			    
+				document.getElementById("valor2").value = "";
+				
+			}             
+			
+		</script>
+
+    </head>
+
+    <body>
+	
+	    <hgroup id="" align="center">
+		
+		<h3><b>Calculando porcentagem</b></h3>
+		
+		<p>Digite os valores</p>
+		
+		<p>
+		<input type="text" id="valor1" value="ex:25%" onmouseup="fazerLimpezaA()"> de
+		<input type="text" id="valor2" value="ex 100" onmouseup="fazerLimpezaB()">
+		</p>
+		
+		<p>
+		<span class="botao" onclick="fazerCalculo()"><b>Ver resultado</b></span>
+		</p>
+		
+		<p>
+		<div id="resultado">...</div>
+		</p>
+		
+	    </hgroup>
+	   
+
+    </body>
+
+</html>
